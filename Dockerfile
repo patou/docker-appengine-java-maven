@@ -28,4 +28,4 @@ RUN \
 
 ENV PATH ${M2}:/usr/local/google/appengine-java-sdks/appengine-java-sdk-${GAE_SDK_VERSION}/bin:${PATH}
 
-CMD ["sh"]
+CMD ["bash"]
