@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t patou/docker-appengine-java-maven .
+  - docker run -d -p 127.0.0.1:80:4567 patou/docker-appengine-java-maven /bin/sh -c "appcfg --help"
