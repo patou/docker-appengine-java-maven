@@ -1,6 +1,6 @@
 # Pull base image.
 FROM dockerfile/java:oracle-java7
-MAINTAINER Fábio Uechi <fabio.uechi@gmail.com>
+MAINTAINER Patrice de Saint Steban <patrice@desaintsteban.fr>
 
 # Install.
 RUN \
@@ -8,7 +8,7 @@ RUN \
   apt-get install -y curl git
 
 #Install maven
-ENV MVN_VERSION 3.2.3
+ENV MVN_VERSION 3.3.3
 RUN \
    wget http://www.us.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/apache-maven-${MVN_VERSION}-bin.zip -P /tmp/ &&\
    mkdir -p /usr/local/apache-maven &&\
@@ -19,7 +19,7 @@ ENV M2_HOME /usr/local/apache-maven/apache-maven-${MVN_VERSION}
 ENV M2 $M2_HOME/bin
 
 #Install appengine java sdk
-ENV GAE_SDK_VERSION 1.9.15
+ENV GAE_SDK_VERSION 1.9.41
 RUN \
    wget http://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-${GAE_SDK_VERSION}.zip -P /tmp/ &&\
    mkdir -p /usr/local/google/appengine-java-sdk &&\
