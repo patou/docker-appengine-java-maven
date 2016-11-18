@@ -24,19 +24,19 @@ For example, you can run a `Oracle Java 8` container with the following command:
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/ciandtsoftware/appengine-java-maven/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull ciandtsoftware/appengine-java-maven`
+2. Download [automated build](https://registry.hub.docker.com/u/ciandtsoftware/appengine-java-maven/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull patou/docker-appengine-java-maven`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/java" github.com/ciandt-dev/docker-appengine-java-maven`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/java" github.com/patou/docker-appengine-java-maven`)
 
 
 ### Usage
 
-    docker run -it --rm ciandtsoftware/appengine-java-maven
+    docker run -it --rm patou/docker-appengine-java-maven
 
 #### Run `java`
 
-    docker run -it --rm ciandtsoftware/appengine-java-maven java
+    docker run -it --rm patou/docker-appengine-java-maven java
 
 #### Run `mvn`
 
-    docker run -it --rm ciandtsoftware/appengine-java-maven mvn
+    docker run -it --rm patou/docker-appengine-java-maven mvn
