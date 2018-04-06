@@ -11,4 +11,4 @@ script:
 
 after_success:
   - docker login -u="$DOCKER_LOGIN" -p="$DOCKER_PASS"
-  - docker push patou/docker-appengine-java-maven
+  - docker push patou/docker-appengine-java-maven:java8

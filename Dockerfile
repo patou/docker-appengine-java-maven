@@ -1,5 +1,5 @@
 # Pull base image.
-FROM maven:3-jdk-7
+FROM maven:3-jdk-8
 MAINTAINER Patrice de Saint Steban <patrice@desaintsteban.fr>
 
 # Install.
@@ -8,7 +8,7 @@ RUN \
   apt-get install -y curl git
 
 #Install appengine java sdk
-ENV GAE_SDK_VERSION 1.9.46
+ENV GAE_SDK_VERSION 1.9.63
 RUN \
    wget http://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-${GAE_SDK_VERSION}.zip -nv -P /tmp/ &&\
    mkdir -p /usr/local/google/appengine-java-sdk &&\
